@@ -6,7 +6,16 @@
 */
 
 function findLargestElement(numbers) {
-    
+    let max = Number.NEGATIVE_INFINITY;
+    numbers.forEach(element => {
+        if(element > max)
+            max = element
+    });
+    if(max == Number.NEGATIVE_INFINITY)
+        return undefined;
+    else
+        return max;
 }
 
+console.log(findLargestElement([-5, -10, -2, -8]));
 module.exports = findLargestElement;
